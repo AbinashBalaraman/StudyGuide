@@ -15,7 +15,7 @@ model =  genai.GenerativeModel('gemini-2.0-flash')
 
 def generate_study_questions(input_text, num_questions, question_type):
     """Generate study questions based on the input text."""
-    prompt = f"""Generate {num_questions} focusing on {question_type} facts and important informations on the following text:\n\n{input_text}\n\n,The information should be designed to test understanding of the key concepts . Format each points give as a separate numbered itemfor example if given text is lodi dynasty sthe answer should include 'the time period important kings and important details'"""
+    prompt = f"""Generate {num_questions} focusing on {question_type} facts and important informations on the following text as topic:\n\n{input_text}\n\n,The information should be designed to test understanding of the key concepts . Format each points give as a separate numbered itemfor example if given text is lodi dynasty sthe answer should include 'the time period important kings and important details'"""
     try:
         response = model.generate_content(prompt)
         return response.text
