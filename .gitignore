@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+env/
+venv/
+.env
+.env.*
+*.sqlite3
+instance/
+
+# Vercel
+.vercel/
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
