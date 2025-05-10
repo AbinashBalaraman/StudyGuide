@@ -39,7 +39,7 @@ def generate_study_questions(input_text):
         return response.text
     except Exception as e:
         return f"Error generating questions: {str(e)}"    
-@app.route('api/generate_questions', methods=['POST'])
+@app.route('/api/generate_questions', methods=['POST'])
 def generate_questions():
     """API endpoint to generate study questions."""
     try:
