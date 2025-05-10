@@ -28,9 +28,7 @@ For example, if the input text is about the "Lodi Dynasty", your output should i
 
 Input Text (Topic):
 {input_text}
-
-Key Facts and Information:
-"""
+Key Facts and Information:"""
     try:
         response = model.generate_content(prompt)
         return response.text

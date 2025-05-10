@@ -3,49 +3,41 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Study Question Generator</title>
+        <title>AI Study Assistant</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-        <style>
-            body {
-                font-family: 'Inter', sans-serif;
-            }
-            </style>
-    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+     
         </head>
         <body>
+            <div class="robo"></div>
             <div class="container">
-                <h1 class="mt-4 mb-4">Study Question Generator</h1>
+              
+                <h1 class="mt-4 mb-4">AI Study Assistant</h1>
+                <p class="lead">Generate comprehensive data for any Topic using artificial intelligence</p>
                 <div class="mb-3">
-                    <label for="input-text" class="form-label">Enter Text or Topic:</label>
-                    <textarea class="form-control" id="input-text" placeholder="Enter the text or topic here..."></textarea>
+                    <label for="input-text" class="form-label">Enter any topic and get a detailed, structured data and explanations for your topic.:</label>
+                    <textarea class="form-control" id="input-text" placeholder='e.g., "The Eiffel Tower", "Quantum Computing", "History of the Roman Empire"'></textarea>
                 </div>
-                <div class="row mb-3">
-                    <div class="col-md-4">
-                        <label for="num-questions" class="form-label">Number of Questions:</label>
-                        <input type="number" class="form-control" id="num-questions" value="5" min="1">
-                    </div>
-                    <div class="col-md-4">
-                        <label for="question-type" class="form-label">Question Type:</label>
-                        <select class="form-select" id="question-type">
-                            <option value="All">All</option>
-                            <option value="Conceptual">Conceptual</option>
-                            <option value="Factual">Factual</option>
-                            <option value="Analytical">Analytical</option>
-                        </select>
-                    </div>
-                </div>
+                
                 <div class="mb-3">
-                    <button id="generate-button" class="btn btn-primary">Generate Questions</button>
+                    <button id="generate-button" class="btn btn-primary"><span class="spinner-border spinner-border-sm d-none" id="generate-spinner"></span> Questions</button>
                     <button id="clear-button" class="btn btn-secondary ms-2">Clear</button>
                 </div>
                 <div class="mb-3">
                     <label for="output-text" class="form-label">Generated Study Questions:</label>
                     <div id="output-text" class="card p-3"></div>
                 </div>
+                <div class="mb-3">
+                    <button id="download-button" class="btn btn-success"><span class="spinner-border spinner-border-sm d-none" id="pdf-spinner"></span>Download as Pdf</button>
             </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoVچGasWBGBCWGQIATIVo/H3nL+U4S2zAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSZNzxWnJo+VAgjjMolPD/S2h3POhrR9YJrcOJcMENFRNnPXGDDpDMkYxM3OQPAbyVrbJo3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
             <script src="script.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
         </body>
         </html>

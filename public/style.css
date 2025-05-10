@@ -1,0 +1,89 @@
+html,body {
+    height: 100%;
+    margin:0%;
+    padding:0%;
+   
+}
+body {
+    font-family:"Rubik Marker Hatch", system-ui;
+    background-image:url(/c.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+    background-color: #f0f0f0;
+   
+
+}
+
+.lead {
+    color: rgb(1, 103, 255);
+    font-style: italic;
+    font-weight: bold;
+    
+}
+.container{
+    text-align: center;
+
+}
+#input-text{
+    opacity: 70%;
+}
+
+h1{
+    color: rgb(101, 62, 198);
+    font-size: 50px;
+    text-align: center;
+}
+.robo{
+    background-image: url(/R-removebg-preview.png);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+
+}
+/* public/style.css */
+
+.markdown-content { /* Style the container for the markdown output */
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: #2c3e50; /* Example color */
+}
+/* Styles only h2 elements INSIDE an element with the class "markdown-content" */
+.markdown-content h2 {
+    font-size: 1.8em;
+    color: #1a4a7e;
+    margin-bottom: 0.5em;
+}
+
+.markdown-content p {
+    line-height: 1.7;
+    margin-bottom: 1em;
+}
+
+.markdown-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.markdown-content li {
+    margin-bottom: 0.5em;
+}
+
+.markdown-content strong {
+    font-weight: bold;
+}
+
+.markdown-content em {
+    font-style: italic;
+}
