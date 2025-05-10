@@ -34,7 +34,7 @@ h1{
     font-size: 50px;
     text-align: center;
 }
-.robo{
+/*.robo{
     background-image: url(/R-removebg-preview.png);
     background-size: cover;
     width: 200px;
@@ -44,7 +44,7 @@ h1{
     opacity: 0.5;
 
 }
-/* public/style.css */
+ public/style.css */
 
 .markdown-content { /* Style the container for the markdown output */
     line-height: 1.7;
