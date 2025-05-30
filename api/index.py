@@ -46,5 +46,5 @@ def generate_questions():
        questions = generate_study_questions(input_text)
        return jsonify({"questions": questions})    
     except Exception as e:
-       print(f'error in generate_answer: {str(e)}')
-       return jsonify({"error": "An error occurred while generating answer."}), 500
+       print(f'error in generate_questions: {str(e)}')
+       return jsonify({"error": "An error occurred while generating questions."}), 500
