@@ -22,7 +22,7 @@
                 generateSpinner.classList.remove('d-none');
 
             }
-    fetch('/api/generate_questions', {
+    fetch('/api/generate_answer', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -37,7 +37,7 @@
             document.getElementById('output-text').textContent = `Error: ${data.error}`;
         } else {
 
-            outputText.innerHTML = marked.parse(data.questions);
+            outputText.innerHTML = marked.parse(data.answer);
             pdf.disabled = false;
         }
     })
