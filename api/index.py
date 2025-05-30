@@ -14,7 +14,6 @@ genai.configure(api_key=api_key)
 model =  genai.GenerativeModel('gemini-2.0-flash-lite')
 
 def generate_study_questions(input_text):
-    """Generate study questions based on the input text."""
     prompt = f"""You are an expert AI research assistant and educational content creator. Your primary function is to generate comprehensive, detailed, and well-structured study notes on any given topic, suitable for individuals preparing for competitive examinations or seeking a thorough understanding of the subject.The user has requested in-depth information on the topic: "{input_text}".Your task is to:
 1.  **Deconstruct the Topic:** Identify the core concepts, sub-topics, and essential facets related to "{input_text}".
 2.  **Retrieve Key Information:** From your knowledge base, gather all significant facts, definitions, principles, theories, processes, examples, applications, key figures/contributors, historical context (if applicable), current status/relevance (if applicable), and important classifications or typologies.
@@ -41,12 +40,9 @@ def generate_study_questions(input_text):
         return f"Error generating questions: {str(e)}"    
 @app.route('/api/generate_questions', methods=['POST'])
 def generate_questions():
-    """API endpoint to generate study questions."""
     try:
        data = request.get_json()
        input_text = data ['inputText']
-       #num_questions =int(data['numQuestions'])
-       #question_type = data['questionType']
        questions = generate_study_questions(input_text)
        return jsonify({"questions": questions})    
     except Exception as e:

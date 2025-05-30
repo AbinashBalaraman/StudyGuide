@@ -22,7 +22,7 @@
                 generateSpinner.classList.remove('d-none');
 
             }
-    fetch('/api/generate_answer', {
+    fetch('/api/generate_questions/generate_answer', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
